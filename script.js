@@ -1,5 +1,12 @@
 function stringChop(str, size) {
   // your code here
+	if (!str) {
+        return [];
+    }
+
+    const chunks = str.match(new RegExp(`.{1,${size}}`, 'g'));
+
+    return chunks;
 }
 
 // Do not change the code below
